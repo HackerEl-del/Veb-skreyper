@@ -1,0 +1,658 @@
+{
+  "env": {
+    "OT": "Windows 11 (10.0.26300)",
+    "Protsessor": "AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD",
+    "Mantiqiy yadrolar": 16,
+    "Operativ xotira": "noma'lum",
+    "GPU": "ishlatilmaydi",
+    "Python": "CPython 3.13.9",
+    "requests": "2.34.2",
+    "beautifulsoup4": "4.15.0",
+    "matplotlib": "3.11.2",
+    "multiprocessing start method": "spawn"
+  },
+  "params": {
+    "source": "lokal sinov serveri",
+    "delay": 0.05,
+    "page_kb": 100,
+    "repeats": 3,
+    "loads": [
+      20,
+      40,
+      60
+    ],
+    "pages": 60
+  },
+  "results": {
+    "profile": {
+      "pages": 20,
+      "total": 2.4098707999999998,
+      "top": [
+        {
+          "func": "<method 'recv_into' of '_socket.socket' objects>",
+          "ncalls": 280,
+          "tottime": 1.0240009,
+          "cumtime": 1.0240009,
+          "share": 42.4919418916566
+        },
+        {
+          "func": "<method 'findall' of 're.Pattern' objects>",
+          "ncalls": 20,
+          "tottime": 0.1532331,
+          "cumtime": 0.1532331,
+          "share": 6.358560799193053
+        },
+        {
+          "func": "<method 'connect' of '_socket.socket' objects>",
+          "ncalls": 20,
+          "tottime": 0.1188,
+          "cumtime": 0.1188,
+          "share": 4.9297248632582304
+        },
+        {
+          "func": "parser.py:203(goahead)",
+          "ncalls": 40,
+          "tottime": 0.0705992,
+          "cumtime": 0.8084,
+          "share": 2.9295844407924276
+        },
+        {
+          "func": "__init__.py:834(endData)",
+          "ncalls": 19032,
+          "tottime": 0.0564004,
+          "cumtime": 0.23177750000000003,
+          "share": 2.340391028431898
+        },
+        {
+          "func": "parser.py:407(parse_starttag)",
+          "ncalls": 9486,
+          "tottime": 0.052617300000000006,
+          "cumtime": 0.4026113,
+          "share": 2.183407508817486
+        },
+        {
+          "func": "<method 'match' of 're.Pattern' objects>",
+          "ncalls": 80881,
+          "tottime": 0.051383200000000004,
+          "cumtime": 0.051383200000000004,
+          "share": 2.132197294560356
+        },
+        {
+          "func": "<built-in method _collections._count_elements>",
+          "ncalls": 20,
+          "tottime": 0.050761900000000006,
+          "cumtime": 0.09387300000000001,
+          "share": 2.1064158294295283
+        },
+        {
+          "func": "parallel_skreyper.py:537(<genexpr>)",
+          "ncalls": 250603,
+          "tottime": 0.0431111,
+          "cumtime": 0.0431111,
+          "share": 1.7889382285556557
+        },
+        {
+          "func": "__init__.py:995(handle_starttag)",
+          "ncalls": 9486,
+          "tottime": 0.0413743,
+          "cumtime": 0.25683130000000004,
+          "share": 1.7168679748308502
+        },
+        {
+          "func": "parser.py:465(parse_endtag)",
+          "ncalls": 9466,
+          "tottime": 0.041262,
+          "cumtime": 0.2330425,
+          "share": 1.7122079739710527
+        },
+        {
+          "func": "element.py:386(setup)",
+          "ncalls": 47010,
+          "tottime": 0.036096500000000004,
+          "cumtime": 0.036096500000000004,
+          "share": 1.4978603832205446
+        }
+      ],
+      "stage": {
+        "fetch_sequential": 1.215265,
+        "analyze_sequential": 1.1947937000000002
+      },
+      "cpu_wall": {
+        "fetch": {
+          "wall": 1.2648152000001573,
+          "cpu": 0.03125
+        },
+        "analyze": {
+          "wall": 0.6687908999992942,
+          "cpu": 0.640625
+        }
+      }
+    },
+    "baseline": [
+      {
+        "pages": 20,
+        "mean": 1.9346022000002752,
+        "std": 0.08080948690743099,
+        "throughput": 10.338042621887412,
+        "words": 250583
+      },
+      {
+        "pages": 40,
+        "mean": 3.8809939666662103,
+        "std": 0.1263989605933062,
+        "throughput": 10.306638027154719,
+        "words": 501028
+      },
+      {
+        "pages": 60,
+        "mean": 5.783130166666524,
+        "std": 0.07979919668314156,
+        "throughput": 10.375004240062752,
+        "words": 751401
+      }
+    ],
+    "fetch_workers": [
+      {
+        "backend": "ketma-ket",
+        "workers": 1,
+        "mean": 3.6568185999998,
+        "std": 0.012024858259884237,
+        "speedup": 1.0,
+        "eff": 1.0
+      },
+      {
+        "backend": "thread",
+        "workers": 1,
+        "mean": 3.7839887666674863,
+        "std": 0.017850987931300823,
+        "speedup": 0.9663925623173338,
+        "eff": 0.9663925623173338
+      },
+      {
+        "backend": "thread",
+        "workers": 2,
+        "mean": 1.841676033333594,
+        "std": 0.03370871594819374,
+        "speedup": 1.985592761057242,
+        "eff": 0.992796380528621
+      },
+      {
+        "backend": "thread",
+        "workers": 4,
+        "mean": 0.9208889333337235,
+        "std": 0.0299903618769165,
+        "speedup": 3.9709659521715586,
+        "eff": 0.9927414880428896
+      },
+      {
+        "backend": "thread",
+        "workers": 8,
+        "mean": 0.4738223666669607,
+        "std": 0.00880001860076322,
+        "speedup": 7.717699410695184,
+        "eff": 0.964712426336898
+      },
+      {
+        "backend": "process",
+        "workers": 1,
+        "mean": 4.223605233333122,
+        "std": 0.08803845114786879,
+        "speedup": 0.8658050167993485,
+        "eff": 0.8658050167993485
+      },
+      {
+        "backend": "process",
+        "workers": 2,
+        "mean": 2.5086246999999275,
+        "std": 0.0642154550929801,
+        "speedup": 1.4576985549093515,
+        "eff": 0.7288492774546758
+      },
+      {
+        "backend": "process",
+        "workers": 4,
+        "mean": 1.658027100000254,
+        "std": 0.012853464265127597,
+        "speedup": 2.205524023099043,
+        "eff": 0.5513810057747608
+      },
+      {
+        "backend": "process",
+        "workers": 8,
+        "mean": 1.2967690333334758,
+        "std": 0.0327707200519539,
+        "speedup": 2.8199459626203276,
+        "eff": 0.35249324532754095
+      }
+    ],
+    "analyze_workers": [
+      {
+        "backend": "ketma-ket",
+        "workers": 1,
+        "mean": 1.8429894999996275,
+        "std": 0.06839168727576389,
+        "speedup": 1.0,
+        "eff": 1.0
+      },
+      {
+        "backend": "thread",
+        "workers": 1,
+        "mean": 1.9131964333331173,
+        "std": 0.09393470278411087,
+        "speedup": 0.9633038552078119,
+        "eff": 0.9633038552078119
+      },
+      {
+        "backend": "thread",
+        "workers": 2,
+        "mean": 1.936346900000596,
+        "std": 0.05542389864457728,
+        "speedup": 0.9517868414998677,
+        "eff": 0.47589342074993385
+      },
+      {
+        "backend": "thread",
+        "workers": 4,
+        "mean": 1.95864826666669,
+        "std": 0.03115117004775506,
+        "speedup": 0.940949700548381,
+        "eff": 0.23523742513709525
+      },
+      {
+        "backend": "thread",
+        "workers": 8,
+        "mean": 1.9209740333335503,
+        "std": 0.07436601221928671,
+        "speedup": 0.9594036504498747,
+        "eff": 0.11992545630623434
+      },
+      {
+        "backend": "process",
+        "workers": 1,
+        "mean": 2.31817653333322,
+        "std": 0.08372059770119313,
+        "speedup": 0.7950168908619143,
+        "eff": 0.7950168908619143
+      },
+      {
+        "backend": "process",
+        "workers": 2,
+        "mean": 1.5589833666666284,
+        "std": 0.035861750655813256,
+        "speedup": 1.1821739342480944,
+        "eff": 0.5910869671240472
+      },
+      {
+        "backend": "process",
+        "workers": 4,
+        "mean": 1.1602743666662718,
+        "std": 0.020312286255920114,
+        "speedup": 1.588408356632879,
+        "eff": 0.39710208915821976
+      },
+      {
+        "backend": "process",
+        "workers": 8,
+        "mean": 1.0721061999999317,
+        "std": 0.05130102083447885,
+        "speedup": 1.719036323080442,
+        "eff": 0.21487954038505525
+      }
+    ],
+    "sync": {
+      "race": {
+        "expected": 24000,
+        "lock_siz": 3290,
+        "lock_bilan": 24000
+      },
+      "stats_delta": 60,
+      "stats_expected": 60
+    },
+    "invoke": {
+      "rows": [
+        {
+          "mode": "ketma-ket",
+          "mean": 4.644733200000701,
+          "std": 0.012498781315849267,
+          "speedup": 1.0
+        },
+        {
+          "mode": "parallel_invoke (thread)",
+          "mean": 4.4750339333331794,
+          "std": 0.24284587738183244,
+          "speedup": 1.0379213362838398
+        },
+        {
+          "mode": "parallel_invoke (process)",
+          "mean": 2.6516739666664457,
+          "std": 0.12574952297109904,
+          "speedup": 1.7516230345014214
+        }
+      ],
+      "task_times": {
+        "task_download": 1.303675099999964,
+        "task_build_index": 2.1298052000001917,
+        "task_page_stats": 1.1263618000011775
+      }
+    },
+    "reduce": [
+      {
+        "backend": "ketma-ket",
+        "chunks": 1,
+        "mean": 1.846609533332715,
+        "std": 0.025926287103801304,
+        "speedup": 1.0
+      },
+      {
+        "backend": "process",
+        "chunks": 2,
+        "mean": 1.5568940666677615,
+        "std": 0.049536255696529585,
+        "speedup": 1.1860855358547515
+      },
+      {
+        "backend": "process",
+        "chunks": 4,
+        "mean": 1.149364766666622,
+        "std": 0.011656255654052233,
+        "speedup": 1.60663488814629
+      },
+      {
+        "backend": "process",
+        "chunks": 8,
+        "mean": 1.1131916666660497,
+        "std": 0.057679233594209144,
+        "speedup": 1.6588423976108384
+      },
+      {
+        "backend": "process",
+        "chunks": 16,
+        "mean": 1.394757466666609,
+        "std": 0.06548871603079041,
+        "speedup": 1.3239646156876341
+      },
+      {
+        "backend": "thread",
+        "chunks": 2,
+        "mean": 1.8516186333332978,
+        "std": 0.03396609858941418,
+        "speedup": 0.9972947453053195
+      },
+      {
+        "backend": "thread",
+        "chunks": 4,
+        "mean": 1.9186598666662273,
+        "std": 0.02944480700544094,
+        "speedup": 0.9624475736500897
+      },
+      {
+        "backend": "thread",
+        "chunks": 8,
+        "mean": 1.9451351000000916,
+        "std": 0.04931836744027459,
+        "speedup": 0.9493476999785918
+      },
+      {
+        "backend": "thread",
+        "chunks": 16,
+        "mean": 1.9128911333336873,
+        "std": 0.05466938098722765,
+        "speedup": 0.9653500406552358
+      }
+    ],
+    "versions": [
+      {
+        "version": "1. Ketma-ket",
+        "mean": 5.82011330000023,
+        "std": 0.16457695333426406,
+        "speedup": 1.0,
+        "throughput": 10.309077660051331
+      },
+      {
+        "version": "2. Faqat oqimlar (k=8)",
+        "mean": 2.4363401333333363,
+        "std": 0.04034362730052136,
+        "speedup": 2.3888755188042254,
+        "throughput": 24.627103243548174
+      },
+      {
+        "version": "3. Faqat jarayonlar (p=8)",
+        "mean": 2.4901120666660668,
+        "std": 0.1665013674528994,
+        "speedup": 2.3372897059177733,
+        "throughput": 24.09530109234486
+      },
+      {
+        "version": "4. Gibrid konveyer (8+8)",
+        "mean": 1.2572499000004125,
+        "std": 0.05472944179867356,
+        "speedup": 4.629241410159047,
+        "throughput": 47.72320920445515
+      }
+    ]
+  },
+  "checks": [
+    {
+      "name": "yuklash thread w=1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "yuklash thread w=2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "yuklash thread w=4",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "yuklash thread w=8",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "yuklash process w=1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "yuklash process w=2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "yuklash process w=4",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "yuklash process w=8",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "tahlil thread w=1",
+      "ok": true,
+      "detail": "94f5f2de3ec8cf2c"
+    },
+    {
+      "name": "tahlil thread w=2",
+      "ok": true,
+      "detail": "94f5f2de3ec8cf2c"
+    },
+    {
+      "name": "tahlil thread w=4",
+      "ok": true,
+      "detail": "94f5f2de3ec8cf2c"
+    },
+    {
+      "name": "tahlil thread w=8",
+      "ok": true,
+      "detail": "94f5f2de3ec8cf2c"
+    },
+    {
+      "name": "tahlil process w=1",
+      "ok": true,
+      "detail": "94f5f2de3ec8cf2c"
+    },
+    {
+      "name": "tahlil process w=2",
+      "ok": true,
+      "detail": "94f5f2de3ec8cf2c"
+    },
+    {
+      "name": "tahlil process w=4",
+      "ok": true,
+      "detail": "94f5f2de3ec8cf2c"
+    },
+    {
+      "name": "tahlil process w=8",
+      "ok": true,
+      "detail": "94f5f2de3ec8cf2c"
+    },
+    {
+      "name": "Lock bilan hisoblagich to'g'ri",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "8 oqimli umumiy STATS hisoblagichi",
+      "ok": true,
+      "detail": "(60 == 60)"
+    },
+    {
+      "name": "parallel_invoke thread",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "parallel_invoke process",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "parallel_reduce process k=2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "parallel_reduce process k=4",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "parallel_reduce process k=8",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "parallel_reduce process k=16",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "parallel_reduce thread k=2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "parallel_reduce thread k=4",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "parallel_reduce thread k=8",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "parallel_reduce thread k=16",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "versiya: 1. Ketma-ket",
+      "ok": true,
+      "detail": "94f5f2de3ec8cf2c"
+    },
+    {
+      "name": "versiya: 2. Faqat oqimlar (k=8)",
+      "ok": true,
+      "detail": "94f5f2de3ec8cf2c"
+    },
+    {
+      "name": "versiya: 3. Faqat jarayonlar (p=8)",
+      "ok": true,
+      "detail": "94f5f2de3ec8cf2c"
+    },
+    {
+      "name": "versiya: 4. Gibrid konveyer (8+8)",
+      "ok": true,
+      "detail": "94f5f2de3ec8cf2c"
+    }
+  ],
+  "authors": {
+    "Boltayev Elbek": [
+      "build_vocabulary",
+      "generate_page",
+      "make_handler",
+      "_server_process_main",
+      "LocalTestServer.__init__",
+      "PoliteGate.__init__",
+      "PoliteGate.allowed",
+      "PoliteGate.slot",
+      "FetchStats.__init__",
+      "FetchStats.record",
+      "_get_gate",
+      "_http_get",
+      "fetch_page",
+      "_fetch_tracked",
+      "fetch_sequential",
+      "fetch_parallel",
+      "race_condition_demo",
+      "pipeline_producer",
+      "parallel_invoke",
+      "task_download",
+      "task_page_stats",
+      "exp_fetch_workers",
+      "exp_sync",
+      "exp_invoke"
+    ],
+    "Soyibjonov Otabek": [
+      "html_to_text",
+      "analyze_html",
+      "analyze_sequential",
+      "analyze_parallel",
+      "task_build_index",
+      "split_chunks",
+      "count_chunk",
+      "merge_counters",
+      "parallel_reduce",
+      "pipeline_consumer",
+      "measure",
+      "cpu_wall",
+      "counter_digest",
+      "pages_digest",
+      "check",
+      "exp_profiling",
+      "exp_baseline",
+      "exp_analyze_workers",
+      "exp_reduce",
+      "collect_env",
+      "fmt_table",
+      "make_charts",
+      "conclusions",
+      "write_report",
+      "run_self_tests"
+    ],
+    "Ikkalasi": [
+      "run_pipeline",
+      "exp_versions",
+      "parse_args",
+      "run_all",
+      "main"
+    ]
+  }
+}
