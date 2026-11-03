@@ -1,3 +1,10 @@
 requests>=2.28
 beautifulsoup4>=4.11
 matplotlib>=3.6
+numpy>=1.24
+numba>=0.59
+mpi4py>=3.1
+psutil>=5.9
+# 5-topshiriq: exe yig'ish uchun - pyinstaller (build_exe.bat o'zi o'rnatadi)
+# 4-topshiriq (NVIDIA GPU kerak; GPU bo'lmasa Google Colab):
+# numba-cuda[cu12]
